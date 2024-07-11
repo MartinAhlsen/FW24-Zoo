@@ -1,5 +1,9 @@
 @import url(../../index.css);
 
-test {
+.test {
     background-color: var(--primary);
+}
+
+.active {
+    color: green;
 }
