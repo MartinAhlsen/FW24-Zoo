@@ -1,15 +1,18 @@
 .header {
     font-family: "StarWars", sans-serif;
-    color: #FFE81F;
-    background-color: black;
+    color: black;
+    background-color: rgb(217, 217, 217);
     padding-top: 16px;
     display: flex;
-    flex-direction: column;
+    flex-grow: 1;
+    max-height: 100px;
 }
 
 @media screen and (min-width: 769px) {
     .header {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        padding: 0 32px;
     }
 }

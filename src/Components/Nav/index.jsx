@@ -4,43 +4,53 @@ import styles from "./nav.module.css";
 const Nav = () => {
   return (
     <nav>
-      <ul>
-        <li>
+      <ul className={styles.ul}>
+        <li className={styles.li}>
           <NavLink
             to="/"
-            className={({ isActive }) => (isActive ? styles.active : "")}
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
           >
             Home
           </NavLink>
         </li>
-        <li>
+        <li className={styles.li}>
           <NavLink
             to="/birds"
-            className={({ isActive }) => (isActive ? styles.active : "")}
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
           >
             Birds
           </NavLink>
         </li>
-        <li>
+        <li className={styles.li}>
           <NavLink
             to="/mammals"
-            className={({ isActive }) => (isActive ? styles.active : "")}
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
           >
             Mammals
           </NavLink>
         </li>
-        <li>
+        <li className={styles.li}>
           <NavLink
             to="/reptiles"
-            className={({ isActive }) => (isActive ? styles.active : "")}
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
           >
             Reptiles
           </NavLink>
         </li>
-        <li>
+        <li className={styles.li}>
           <NavLink
             to="/asdfasdf"
-            className={({ isActive }) => (isActive ? styles.active : "")}
+            className={({ isActive }) =>
+              isActive ? styles.active : styles.inactive
+            }
           >
             404
           </NavLink>
