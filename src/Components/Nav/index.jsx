@@ -3,7 +3,7 @@ import styles from "./nav.module.css";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul className={styles.ul}>
         <li className={styles.li}>
           <NavLink

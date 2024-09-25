@@ -1,0 +1,15 @@
+.titleContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+@media screen and (min-width: 769px) {
+    .titleContainer {
+        padding: 0 32px;
+    }
+}

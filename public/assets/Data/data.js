@@ -1,7 +1,8 @@
 const animals = {
   birds: [
     {
-      name: "cassowary",
+      name: "Cassowary",
+      link: "/birds/cassowary",
       lifespan: "20 years",
       group: "bird",
       food: "Plants matter like fruit, insects and small animals like mice and lizards",
@@ -12,7 +13,8 @@ const animals = {
       found: "Queensland",
     },
     {
-      name: "kookaburra",
+      name: "Kookaburra",
+      link: "/birds/kookaburra",
       lifespan: "20 years",
       group: "bird",
       food: "Insects and small animals including snakes, frogs and lizards",
@@ -23,7 +25,9 @@ const animals = {
       found: "Australia wide",
     },
     {
-      name: "yellow-tailed black cockatoo",
+      name: "Cockatoo",
+      link: "/birds/cockatoo",
+      fullName: "Yellow-tailed black cockatoo",
       lifespan: "41 years",
       group: "bird",
       food: "Fruit, seeds and other plant material",
@@ -36,7 +40,8 @@ const animals = {
   ],
   mammals: [
     {
-      name: "echidna",
+      name: "Echidna",
+      link: "/mammals/echidna",
       lifespan: "50 years",
       group: "mammals",
       food: "Insects such as ants and termites, beetle larvae and worms",
@@ -47,7 +52,8 @@ const animals = {
       found: "Throughout Australia",
     },
     {
-      name: "tasmanian devil",
+      name: "Tasmanian devil",
+      link: "/mammals/tasmanian_devil",
       lifespan: "5 years",
       group: "mammals",
       food: "A predator, then eat meat from other animals such as wallabies and wombats",
@@ -58,7 +64,8 @@ const animals = {
       found: "Tasmania",
     },
     {
-      name: "quokka",
+      name: "Quokka",
+      link: "/mammals/quokka",
       lifespan: "10 years",
       group: "mammals",
       food: "Plant eaters, they munch on shrubs and grasses",
@@ -72,7 +79,8 @@ const animals = {
   ],
   reptiles: [
     {
-      name: "frill-necked lizard",
+      name: "Frill-necked lizard",
+      link: "/reptiles/frill_necked_lizard",
       lifespan: "20 years",
       group: "reptile",
       food: "Small insects and spiders",
@@ -83,7 +91,8 @@ const animals = {
       found: "Northern Australia",
     },
     {
-      name: "hawksbill turtle",
+      name: "Hawksbill turtle",
+      link: "/reptiles/hawksbill_turtle",
       lifespan: "50 years",
       group: "reptile",
       food: "Other animals (sponges & jellyfish), sea plants",
@@ -95,7 +104,8 @@ const animals = {
         "Tropical coasts of Queensland, Northern Territory and Western Australia",
     },
     {
-      name: "perentie",
+      name: "Perentie",
+      link: "/reptiles/perentie",
       lifespan: "20 years",
       group: "reptile",
       food: "Carnivore, they eat animals like kangaroos, rabbits, lizards and birds",
@@ -106,8 +116,21 @@ const animals = {
       found: "Deserts",
     },
   ],
+  categories: [
+    {
+      name: "Birds",
+      link: "/birds",
+    },
+    {
+      name: "Mammals",
+      link: "/mammals",
+    },
+    {
+      name: "Reptiles",
+      link: "/reptiles",
+    },
+  ],
 };
 
-const { birds, mammals, reptiles } = animals;
-
-export { birds, mammals, reptiles, animals };
+const { birds, mammals, reptiles, categories } = animals;
+export { birds, mammals, reptiles, categories };
