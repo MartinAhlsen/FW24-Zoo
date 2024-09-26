@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-const MarsLayout = () => {
+const BirdsLayout = () => {
   return (
     <>
       <h1>Birds are awsome</h1>
@@ -8,4 +8,4 @@ const MarsLayout = () => {
   );
 };
 
-export default MarsLayout;
+export default BirdsLayout;

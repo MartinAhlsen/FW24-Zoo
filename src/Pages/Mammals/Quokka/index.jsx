@@ -1,15 +1,7 @@
+import AnimalPage from "../../../Components/AnimalPage";
+
 const Quokka = () => {
-  return (
-    <>
-      <h1>Quokka</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo odit
-        doloremque amet, dolorum officia officiis nisi perferendis omnis fugiat
-        repellat facilis nobis alias, dolor, facere placeat tempore libero iure
-        maiores.
-      </p>
-    </>
-  );
+  return <AnimalPage data={data} />;
 };
 
 export default Quokka;
