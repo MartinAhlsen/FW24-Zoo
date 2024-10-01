@@ -1,10 +1,11 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import {
   birds,
   reptiles,
   mammals,
   categories,
+  animals,
 } from "../public/assets/Data/data";
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
@@ -14,94 +15,96 @@ import Reptiles from "./Pages/Reptiles";
 import Error404 from "./Pages/Error404";
 import Cassowary from "./Pages/Birds/Cassowary";
 import Kookaburra from "./Pages/Birds/Kookaburra";
-import YellowTailedBlackCockatoo from "./Pages/Birds";
+import YellowTailedBlackCockatoo from "./Pages/Birds/YellowTailedBlackCockatoo";
 import Echidna from "./Pages/Mammals/Echidna";
 import TasmanianDevil from "./Pages/Mammals/TasmanianDevil";
 import Quokka from "./Pages/Mammals/Quokka";
 import FrillNeckedLizard from "./Pages/Reptiles/FrillNeckedLizard";
 import HawksbillTurtle from "./Pages/Reptiles/HawksbillTurtle";
 import Perentie from "./Pages/Reptiles/Perentie";
+import { Outlet } from "react-router-dom"; // Added Outlet import
 
 const App = () => {
   const location = useLocation();
   const [PageData, setPageData] = useState(categories);
-  const [AnimalData, setAnimalData] = useState(null);
+  const [AnimalData, setAnimalData] = useState(reptiles);
+  // console.log(animals);
+  // console.log(reptiles);
+
   useEffect(() => {
-    console.log(location.pathname);
+    {
+      console.log("asldfjalsdfj" + location.pathname);
+    }
     switch (true) {
       case location.pathname.includes("birds"):
-        console.log("birds");
         setPageData(birds);
         switch (true) {
           case location.pathname.includes("cassowary"):
-            console.log("cassowary");
             setAnimalData(birds[0]);
-            console.log(AnimalData);
-            console.log(setAnimalData);
             break;
           case location.pathname.includes("kookaburra"):
-            console.log("kookaburra");
             setAnimalData(birds[1]);
             break;
           case location.pathname.includes("cockatoo"):
-            console.log("cockatoo");
             setAnimalData(birds[2]);
             break;
         }
         break;
       case location.pathname.includes("mammals"):
-        console.log("mammals");
         setPageData(mammals);
         switch (true) {
           case location.pathname.includes("echidna"):
-            console.log("echidna");
             setAnimalData(mammals[0]);
-            console.log(AnimalData);
-            console.log(setAnimalData);
-
             break;
           case location.pathname.includes("tasmanian_devil"):
-            console.log("tasmanian_devil");
             setAnimalData(mammals[1]);
             break;
           case location.pathname.includes("quokka"):
-            console.log("quokka");
             setAnimalData(mammals[2]);
             break;
         }
         break;
       case location.pathname.includes("reptiles"):
-        console.log("reptiles");
         setPageData(reptiles);
         switch (true) {
           case location.pathname.includes("frill_necked_lizard"):
-            console.log("frill_necked_lizard");
             setAnimalData(reptiles[0]);
             break;
           case location.pathname.includes("hawksbill_turtle"):
-            console.log("hawksbill_turtle");
             setAnimalData(reptiles[1]);
             break;
           case location.pathname.includes("perentie"):
-            console.log("perentie");
             setAnimalData(reptiles[2]);
             break;
         }
         break;
-
       default:
-        console.log("home");
         setPageData(categories);
-        console.log(categories);
+        // setPageData(animals);
         break;
     }
   }, [location.pathname]);
 
   return (
     <Routes>
-      <Route element={<Layout PageData={PageData} />}>
-        <Route path="/" element={<Home pageTitle={"Home"} />} />
-        <Route path="/birds" element={<Birds data={PageData} />}>
+      <Route
+        element={
+          <Layout
+            location={location}
+            PageData={PageData}
+            animalsData={animals}
+          />
+        }
+      >
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route
+          path="/home"
+          element={<Home pageTitle={"Welcome to the Zoo!"} />}
+        />
+        <Route
+          path="/birds"
+          element={<Birds contentObject={categories[0]} data={PageData} />}
+        >
           <Route path="cassowary" element={<Cassowary data={AnimalData} />} />
           <Route path="kookaburra" element={<Kookaburra data={AnimalData} />} />
           <Route
@@ -109,7 +112,10 @@ const App = () => {
             element={<YellowTailedBlackCockatoo data={AnimalData} />}
           />
         </Route>
-        <Route path="/mammals" element={<Mammals data={PageData} />}>
+        <Route
+          path="/mammals"
+          element={<Mammals contentObject={categories[1]} data={PageData} />}
+        >
           <Route path="echidna" element={<Echidna data={AnimalData} />} />
           <Route
             path="tasmanian_devil"
@@ -117,7 +123,10 @@ const App = () => {
           />
           <Route path="quokka" element={<Quokka data={AnimalData} />} />
         </Route>
-        <Route path="/reptiles" element={<Reptiles data={PageData} />}>
+        <Route
+          path="/reptiles"
+          element={<Reptiles contentObject={categories[2]} data={PageData} />}
+        >
           <Route
             path="frill_necked_lizard"
             element={<FrillNeckedLizard data={AnimalData} />}

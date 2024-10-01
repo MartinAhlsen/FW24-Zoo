@@ -1,8 +1,9 @@
 import AnimalPage from "../../../Components/AnimalPage";
 
 const YellowTailedBlackCockatoo = ({ data }) => {
-  console.log(data);
-  console.log("cook");
+  if (!data) {
+    return <p>Loading...</p>;
+  }
   return <AnimalPage data={data} />;
 };
 

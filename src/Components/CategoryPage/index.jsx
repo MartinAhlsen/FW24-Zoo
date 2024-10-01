@@ -1,9 +1,13 @@
-const CategoryPage = ({ currentPage }) => {
+import { NavLink } from "react-router-dom/dist";
+
+const CategoryPage = ({ contentObject }) => {
   return (
-    <>
-      <h1>{currentPage.name}</h1>
-      <p>{currentPage.description}</p>
-    </>
+    <div>
+      <h1>{contentObject.name}</h1>
+      <p>{contentObject.p1}</p>
+      <p>{contentObject.p2}</p>
+      <NavLink to="/home">Back to Home</NavLink>
+    </div>
   );
 };
 

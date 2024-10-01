@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom";
+import CategoryPage from "../../Components/CategoryPage";
 
-const Birds = ({ data }) => {
+const Birds = ({ data, contentObject }) => {
+  // featured ANimal = state
   return (
-    <>
-      <Outlet data={data} />
-    </>
+    <div>
+      <CategoryPage contentObject={contentObject} />
+      <Outlet />
+    </div>
   );
 };
 

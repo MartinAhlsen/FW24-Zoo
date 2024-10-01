@@ -1,6 +1,9 @@
 import AnimalPage from "../../../Components/AnimalPage";
 
-const HawksbillTurtle = () => {
+const HawksbillTurtle = ({ data }) => {
+  if (!data) {
+    return <p>Loading...</p>;
+  }
   return <AnimalPage data={data} />;
 };
 

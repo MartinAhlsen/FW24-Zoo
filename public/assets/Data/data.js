@@ -116,21 +116,28 @@ const animals = {
       found: "Deserts",
     },
   ],
-  categories: [
-    {
-      name: "Birds",
-      link: "/birds",
-    },
-    {
-      name: "Mammals",
-      link: "/mammals",
-    },
-    {
-      name: "Reptiles",
-      link: "/reptiles",
-    },
-  ],
 };
 
-const { birds, mammals, reptiles, categories } = animals;
-export { birds, mammals, reptiles, categories };
+const { birds, mammals, reptiles } = animals;
+export { birds, mammals, reptiles, animals };
+
+export const categories = [
+  {
+    name: "Birds",
+    link: "/birds",
+    p1: "Our bird exhibits offer a window into one of the most diverse and widespread groups of animals on Earth, with species ranging from the large and flightless cassowary to the laughing kookaburra, whose distinctive call echoes through the forest. Birds are characterized by their feathers, which not only enable flight but also provide insulation and play a role in mating displays. The yellow-tailed black cockatoo, for example, uses its striking plumage and loud, wailing call to communicate with others of its kind. Birds have evolved a wide range of beak shapes and sizes to suit their diets, whether they are hunting insects or cracking open seeds. The kookaburra, with its long, sharp beak, catches small vertebrates like lizards and snakes, while the cassowary uses its strong legs and helmet-like casque to navigate through dense rainforests.",
+    p2: "At our zoo, you'll discover the science behind these incredible adaptations and learn about the vital roles birds play in ecosystems across the globe. Birds are important pollinators, seed dispersers, and even predators, helping to control insect and rodent populations. By observing their behaviors up close, from their flight patterns to their nesting habits, you can gain insight into the fascinating life cycles of birds and their complex social structures. Many bird species are facing threats due to habitat loss and climate change, making conservation efforts crucial. When you visit our bird exhibits, you'll not only enjoy their beauty and grace but also come away with a deeper understanding of their ecological importance and the urgent need to protect them for future generations.",
+  },
+  {
+    name: "Mammals",
+    link: "/mammals",
+    p1: "Mammals at our zoo provide a fascinating glimpse into the complexity of life on Earth, offering visitors the chance to see a wide range of species that highlight the adaptability of these warm-blooded creatures. Unlike reptiles and birds, mammals are distinguished by their ability to produce milk to nourish their young, and most species give birth to live offspring. From the spiny echidna, one of the few egg-laying mammals, to the tenacious Tasmanian devil, known for its powerful bite, mammals demonstrate remarkable evolutionary strategies. These animals have developed fur or hair to help regulate body temperature, allowing them to thrive in environments ranging from arid deserts to frozen tundras. The quokka, for instance, is a small herbivore with a charming smile that plays a crucial role in dispersing seeds, contributing to the balance of the ecosystems they inhabit.",
+    p2: "When you visit the mammals at our zoo, you'll not only be enchanted by their unique behaviors but also learn how vital they are to the health of the planet. Many species are integral to their habitats, whether through pollination, seed dispersal, or as top predators controlling other animal populations. Our exhibits offer a rare opportunity to observe these creatures up close and understand the scientific significance behind their adaptations. From social structures in groups of animals to the solitary lives of others, mammals display a remarkable range of lifestyles. A trip to the zoo isn’t just a fun family outing; it’s a chance to delve into the evolutionary history and ecological importance of some of the most captivating creatures on Earth.",
+  },
+  {
+    name: "Reptiles",
+    link: "/reptiles",
+    p1: "The reptiles at our zoo are a living connection to the age of dinosaurs, with species that have survived and adapted for millions of years. Unlike mammals, reptiles are ectothermic, meaning they rely on their surroundings to regulate their body temperature. This trait has allowed them to conquer a wide variety of environments, from the sweltering deserts to the tropical rainforests. For example, the powerful perentie, Australia's largest lizard, uses its sharp claws and strong limbs to hunt prey like small mammals and birds. Meanwhile, the hawksbill turtle, with its distinctive beak-like mouth, plays a crucial role in maintaining coral reef ecosystems by controlling the population of sponges. These reptiles have adapted unique survival strategies, from the defensive frills of the frill-necked lizard to the incredible navigation skills of sea turtles that migrate thousands of miles.",
+    p2: "A visit to our reptile exhibit will not only spark your curiosity about these ancient creatures but also deepen your understanding of their role in the natural world. Many reptiles are apex predators or key species that help regulate ecosystems by controlling pest populations or maintaining habitat balance. You'll discover how reptiles like the hawksbill turtle are critically endangered due to human activity, highlighting the importance of conservation efforts. By learning about their biology and behavior, you’ll gain a new appreciation for how these seemingly cold and distant creatures are an essential part of our planet's biodiversity. Come face-to-face with reptiles that have mastered the art of survival, and walk away with a newfound respect for these ancient, resilient animals.",
+  },
+];
