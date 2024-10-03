@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./sidebar.module.css";
-import { object } from "prop-types";
+import PropTypes from "prop-types";
 
 const Sidebar = ({ location, isHome, data, animalsData }) => {
   const navigate = useNavigate();
@@ -41,30 +41,54 @@ const Sidebar = ({ location, isHome, data, animalsData }) => {
                     {category.name}
                   </NavLink>
 
-                  {isHome && (
-                    <ul className="sublist">
-                      {animalsData[currentAnimal].map((animal, index) => (
-                        <li className={styles.listItem}>
-                          <NavLink
-                            className={({ isActive }) =>
-                              isActive ? styles.active : styles.inactive
-                            }
-                            // to={`${currentAnimal}/${animal}`}
-                            to="/birds"
-                            onClick={(e) =>
-                              handleClick(
-                                e,
-                                location.pathname.includes(category.link),
-                                parentRoute
-                              )
-                            }
-                          >
-                            {animal.name}
+                  {isHome && console.log("isHome")}
+                  <ul>
+                    {category.name === "Birds" && (
+                      <ul>
+                        <li>
+                          <NavLink to="/birds/cassowary">Cassowary</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/birds/kookaburra">Kookaburra</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/birds/cockatoo">Cockatoo</NavLink>
+                        </li>
+                      </ul>
+                    )}
+                    {category.name === "Mammals" && (
+                      <ul>
+                        <li>
+                          <NavLink to="/mammals/echidna">Echidna</NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/mammals/tasmanian_devil">
+                            Tasmanian Devil
                           </NavLink>
                         </li>
-                      ))}
-                    </ul>
-                  )}
+                        <li>
+                          <NavLink to="/mammals/quokka">Quokka</NavLink>
+                        </li>
+                      </ul>
+                    )}
+                    {category.name === "Reptiles" && (
+                      <ul>
+                        <li>
+                          <NavLink to="/reptiles/frill_necked_lizard">
+                            Frill-necked Lizard
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/reptiles/hawksbill_turtle">
+                            Hawksbill Turtle
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/reptiles/perentie">Perentie</NavLink>
+                        </li>
+                      </ul>
+                    )}
+                  </ul>
                 </li>
               );
             })}
