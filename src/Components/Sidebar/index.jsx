@@ -12,8 +12,6 @@ const Sidebar = ({ location, isHome, data, animalsData }) => {
     }
   };
 
-  console.log(data);
-
   return (
     <>
       {data && (
@@ -40,8 +38,6 @@ const Sidebar = ({ location, isHome, data, animalsData }) => {
                   >
                     {category.name}
                   </NavLink>
-
-                  {isHome && console.log("isHome")}
                   <ul>
                     {category.name === "Birds" && (
                       <ul>

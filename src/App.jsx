@@ -28,13 +28,8 @@ const App = () => {
   const location = useLocation();
   const [PageData, setPageData] = useState(categories);
   const [AnimalData, setAnimalData] = useState(reptiles);
-  // console.log(animals);
-  // console.log(reptiles);
 
   useEffect(() => {
-    {
-      console.log("asldfjalsdfj" + location.pathname);
-    }
     switch (true) {
       case location.pathname.includes("birds"):
         setPageData(birds);
@@ -80,7 +75,6 @@ const App = () => {
         break;
       default:
         setPageData(categories);
-        // setPageData(animals);
         break;
     }
   }, [location.pathname]);
