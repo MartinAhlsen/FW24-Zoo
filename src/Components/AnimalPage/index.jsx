@@ -38,9 +38,4 @@ const AnimalPage = ({ data }) => {
   );
 };
 
-// Define prop types
-AnimalPage.propTypes = {
-  data: PropTypes.object.isRequired,
-};
-
 export default AnimalPage;

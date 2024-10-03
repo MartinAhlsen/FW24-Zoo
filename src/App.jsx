@@ -22,7 +22,6 @@ import Quokka from "./Pages/Mammals/Quokka";
 import FrillNeckedLizard from "./Pages/Reptiles/FrillNeckedLizard";
 import HawksbillTurtle from "./Pages/Reptiles/HawksbillTurtle";
 import Perentie from "./Pages/Reptiles/Perentie";
-import { Outlet } from "react-router-dom"; // Added Outlet import
 
 const App = () => {
   const location = useLocation();
