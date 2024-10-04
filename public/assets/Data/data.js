@@ -2,6 +2,7 @@ const animals = {
   birds: [
     {
       name: "Cassowary",
+      img: "../../../public/assets/Images/cassowary.jpg",
       link: "/birds/cassowary",
       lifespan: "20 years",
       group: "bird",
@@ -14,6 +15,7 @@ const animals = {
     },
     {
       name: "Kookaburra",
+      img: "../../../public/assets/Images/kookaburra.jpg",
       link: "/birds/kookaburra",
       lifespan: "20 years",
       group: "bird",
@@ -26,6 +28,7 @@ const animals = {
     },
     {
       name: "Cockatoo",
+      img: "/../../../public/assets/Images/cockatoo.jpg",
       link: "/birds/cockatoo",
       fullName: "Yellow-tailed black cockatoo",
       lifespan: "41 years",
@@ -41,6 +44,7 @@ const animals = {
   mammals: [
     {
       name: "Echidna",
+      img: "/../../../public/assets/Images/echidna.jpg",
       link: "/mammals/echidna",
       lifespan: "50 years",
       group: "mammals",
@@ -53,6 +57,7 @@ const animals = {
     },
     {
       name: "Tasmanian devil",
+      img: "/../../../public/assets/Images/tasmaniandevil.jpg",
       link: "/mammals/tasmanian_devil",
       lifespan: "5 years",
       group: "mammals",
@@ -65,6 +70,7 @@ const animals = {
     },
     {
       name: "Quokka",
+      img: "/../../../public/assets/Images/quokka.jpg",
       link: "/mammals/quokka",
       lifespan: "10 years",
       group: "mammals",
@@ -80,6 +86,7 @@ const animals = {
   reptiles: [
     {
       name: "Frill-necked lizard",
+      img: "/../../../public/assets/Images/fnlizard.jpg",
       link: "/reptiles/frill_necked_lizard",
       lifespan: "20 years",
       group: "reptile",
@@ -92,6 +99,7 @@ const animals = {
     },
     {
       name: "Hawksbill turtle",
+      img: "/../../../public/assets/Images/hawksbillturtle.jpg",
       link: "/reptiles/hawksbill_turtle",
       lifespan: "50 years",
       group: "reptile",
@@ -105,6 +113,7 @@ const animals = {
     },
     {
       name: "Perentie",
+      img: "/../../../public/assets/Images/perentie.jpg",
       link: "/reptiles/perentie",
       lifespan: "20 years",
       group: "reptile",

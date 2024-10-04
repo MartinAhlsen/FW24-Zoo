@@ -16,6 +16,7 @@ const AnimalPage = ({ data }) => {
     <>
       <h1>{data.name}</h1>
       <p>{descriptionFullOrShort}</p>
+      <img src={data.img} alt={data.name} />
 
       {!ReadMore && <button onClick={handleClick}>Read more</button>}
 
@@ -23,7 +24,8 @@ const AnimalPage = ({ data }) => {
         <>
           <div className="readmoreContainer">
             {Object.entries(data).map(([key, value]) => {
-              if (key === "description" || key === "link") return null;
+              if (key === "description" || key === "link" || key === "img")
+                return null;
               return (
                 <div key={key}>
                   {key}: {value}
