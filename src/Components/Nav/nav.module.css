@@ -3,6 +3,7 @@
 .nav {
     display: flex;
     align-items: center;
+    flex-grow: 1;
 }
 
 .test {
@@ -20,12 +21,13 @@
     text-decoration: none;
 }
 
-.ul {
+.NavUl {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding: 0;
+    flex-direction: row;
 }
 
 .li {
@@ -34,3 +36,5 @@
     list-style: none;
 
 }
+
+@media screen and (min-width:768px) {}

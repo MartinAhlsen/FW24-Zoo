@@ -1,0 +1,8 @@
+.imageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.categoryLink {
+    color: blue;
+}

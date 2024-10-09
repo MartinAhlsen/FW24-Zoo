@@ -3,6 +3,8 @@
   --secondary: white;
 }
 
+
+
 body {
   margin: 0;
   display: flex;
@@ -19,15 +21,20 @@ body {
 .mainWrapper {
   display: flex;
   flex-grow: 1;
-
 }
 
 ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 main {
   display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100vw;
 }
@@ -37,4 +44,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (min-width:768px) {
+  main {
+    flex-direction: row;
+  }
+
+  .routes-container {
+    padding: 32px;
+    align-items: start;
+  }
 }

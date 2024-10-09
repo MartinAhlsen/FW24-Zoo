@@ -4,8 +4,8 @@ import styles from "./nav.module.css";
 const Nav = () => {
   return (
     <nav className={styles.nav}>
-      <ul className={styles.ul}>
-        <li className={styles.li}>
+      <ul className={styles.NavUl}>
+        <li className={styles.NavLi}>
           <NavLink
             to="/home"
             className={({ isActive }) =>
@@ -15,7 +15,7 @@ const Nav = () => {
             Home
           </NavLink>
         </li>
-        <li className={styles.li}>
+        <li className={styles.NavLi}>
           <NavLink
             to="/birds"
             className={({ isActive }) =>
@@ -25,7 +25,7 @@ const Nav = () => {
             Birds
           </NavLink>
         </li>
-        <li className={styles.li}>
+        <li className={styles.NavLi}>
           <NavLink
             to="/mammals"
             className={({ isActive }) =>
@@ -35,7 +35,7 @@ const Nav = () => {
             Mammals
           </NavLink>
         </li>
-        <li className={styles.li}>
+        <li className={styles.NavLi}>
           <NavLink
             to="/reptiles"
             className={({ isActive }) =>
@@ -43,16 +43,6 @@ const Nav = () => {
             }
           >
             Reptiles
-          </NavLink>
-        </li>
-        <li className={styles.li}>
-          <NavLink
-            to="/asdfasdf"
-            className={({ isActive }) =>
-              isActive ? styles.active : styles.inactive
-            }
-          >
-            404
           </NavLink>
         </li>
       </ul>

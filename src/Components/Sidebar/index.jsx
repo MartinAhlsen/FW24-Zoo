@@ -40,46 +40,46 @@ const Sidebar = ({ location, isHome, data, animalsData }) => {
                   </NavLink>
                   <ul>
                     {category.name === "Birds" && (
-                      <ul>
-                        <li>
+                      <ul className={styles.submenu}>
+                        <li className={styles.sublink}>
                           <NavLink to="/birds/cassowary">Cassowary</NavLink>
                         </li>
-                        <li>
+                        <li className={styles.sublink}>
                           <NavLink to="/birds/kookaburra">Kookaburra</NavLink>
                         </li>
-                        <li>
+                        <li className={styles.sublink}>
                           <NavLink to="/birds/cockatoo">Cockatoo</NavLink>
                         </li>
                       </ul>
                     )}
                     {category.name === "Mammals" && (
-                      <ul>
-                        <li>
+                      <ul className={styles.submenu}>
+                        <li className={styles.sublink}>
                           <NavLink to="/mammals/echidna">Echidna</NavLink>
                         </li>
-                        <li>
+                        <li className={styles.sublink}>
                           <NavLink to="/mammals/tasmanian_devil">
                             Tasmanian Devil
                           </NavLink>
                         </li>
-                        <li>
+                        <li className={styles.sublink}>
                           <NavLink to="/mammals/quokka">Quokka</NavLink>
                         </li>
                       </ul>
                     )}
                     {category.name === "Reptiles" && (
-                      <ul>
-                        <li>
+                      <ul className={styles.submenu}>
+                        <li className={styles.sublink}>
                           <NavLink to="/reptiles/frill_necked_lizard">
                             Frill-necked Lizard
                           </NavLink>
                         </li>
-                        <li>
+                        <li className={styles.sublink}>
                           <NavLink to="/reptiles/hawksbill_turtle">
                             Hawksbill Turtle
                           </NavLink>
                         </li>
-                        <li>
+                        <li className={styles.sublink}>
                           <NavLink to="/reptiles/perentie">Perentie</NavLink>
                         </li>
                       </ul>
